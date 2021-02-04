@@ -1,0 +1,66 @@
+/* CSS files add styling rules to your content */
+
+/*gradient*/
+
+body {
+    background: linear-gradient(235deg, #000000, #212e20, #000000, #212e20, #000000, #212e20, #000000, #212e20, #000000, #212e20);
+    background-size: 2000% 2000%;
+
+    -webkit-animation: AnimationName 41s ease infinite;
+    -moz-animation: AnimationName 41s ease infinite;
+    animation: AnimationName 41s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+body {
+  font-family: Consolas, "Roboto Mono", monospace;
+  color: #0f3;
+  margin: 2em;
+  line-height: 150%;
+}
+
+h1 {
+  font-style: italic;
+  font-weight: 200%;
+  color: #fff;
+}
+
+#input{
+  width: 90%;
+  white-space: nowrap;
+}
+#txt{
+  width: 80%;
+}
+#opt{
+  width: 90%;
+  white-space: nowrap;
+}
+#optacc{
+  display: inline-block;
+  width: 60%;
+  
+}
+#optrate{
+  display: inline-block;
+  width: 40%;
+  white-space: nowrap;
+}
+#rate{
+  width: 50%;
+}
