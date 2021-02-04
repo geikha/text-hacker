@@ -323,6 +323,8 @@ document.addEventListener(
     var rate = document.getElementById("rate")
     var defaultText = document.getElementById("hacktext").firstChild.nodeValue
     
+    txt.value = defaultText
+    
     var hacking = start(defaultText);
     function restartHacking(text, isAcc, rateValue) {
       clearInterval(hacking);
