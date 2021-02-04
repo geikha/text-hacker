@@ -192,11 +192,11 @@ let variationsOfPunctuations = {
     '?':'??¿¡'
 }
 
-let emojis = {
+/*let emojis = {
     'o':"☠⚙☢♉⛔☭⛧",
 }
 
-let tailChars = ",!*¿("
+let tailChars = ",!*¿("*/
 
 const letterWeight = [
   [nothing,135],
