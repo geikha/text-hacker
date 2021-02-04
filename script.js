@@ -192,11 +192,11 @@ let variationsOfPunctuations = {
     '?':'??¿¡'
 }
 
-/*let emojis = {
+let emojis = {
     'o':"☠⚙☢♉⛔☭⛧",
 }
 
-let tailChars = ",!*¿("*/
+let tailChars = ",!*¿("
 
 const letterWeight = [
   [nothing,135],
@@ -252,14 +252,21 @@ String.prototype.isNumber = function(){
   return "0123456789".includes(this);
 }
 function setText(id,text){
-  document.getElementById(id).firstChild.nodeValue = text
+  document.getElementById(id).innerHTML = text
 }
 function getText(id){
   return document.getElementById(id).firstChild.nodeValue;
 }
+function clearDiv(id) {
+  let div = document.getElementById(id);
+  console.log(div)
+  while (div.firstChild) {
+    div.removeChild(div.firstChild);
+  }
+}
 function addLineToText(id,text){
-  var div = document.getElementById(id)
-  div.insertAdjacentHTML('beforebegin',text+"<br>");
+  let div = document.getElementById(id)
+  div.insertAdjacentHTML('afterbegin',text+"<br/>");
 }
 function randomInt(min,max){
   return Math.round(Math.random()*(max-min)+min);
@@ -296,8 +303,6 @@ function hackString(s, out) {
 
 function start(ogtext, caller, isAcc, rateValue) {
   let arr = Array.from(ogtext);
-  if(isAcc)
-    setText("hacktext", "")
   return setInterval(function() {
     if(isAcc)
       addLineToText("hacktext", hackString(ogtext, arr))
@@ -319,6 +324,8 @@ document.addEventListener(
     var hacking = start(defaultText);
     function restartHacking(text, isAcc, rateValue) {
       clearInterval(hacking);
+      if(!isAcc)
+        clearDiv("hacktext")
       hacking = start(text, hacking, isAcc, rateValue);
     }
     button.addEventListener("click", function() {
@@ -327,7 +334,7 @@ document.addEventListener(
       const rateValue = rate.value
       restartHacking(text, isAcc, rateValue);
     });
-    acc.addEventListener("change", function() {
+    acc.addEventListener("click", function() {
       button.click()
     });
     rate.addEventListener("input", function() {
