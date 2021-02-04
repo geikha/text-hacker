@@ -252,7 +252,8 @@ String.prototype.isNumber = function(){
   return "0123456789".includes(this);
 }
 function setText(id,text){
-  document.getElementById(id).innerHTML = text
+  document.getElementById(id).innerHTML = 
+    text.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 }
 function getText(id){
   return document.getElementById(id).firstChild.nodeValue;
