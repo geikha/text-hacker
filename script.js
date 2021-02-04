@@ -251,12 +251,8 @@ String.prototype.isVowel = function(){
 String.prototype.isNumber = function(){
   return "0123456789".includes(this);
 }
-function setText(id,text){
-  document.getElementById(id).innerHTML = 
-    text.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
-}
-function getText(id){
-  return document.getElementById(id).firstChild.nodeValue;
+function escapeStringForHTML(s){
+  return s.replace(/&/g, "&amp;").replace(/>/g, "&gt;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
 }
 function clearDiv(id) {
   let div = document.getElementById(id);
@@ -264,9 +260,15 @@ function clearDiv(id) {
     div.removeChild(div.firstChild);
   }
 }
+function setText(id,text){
+  document.getElementById(id).innerHTML = escapeStringForHTML(text);
+}
+function getText(id){
+  return document.getElementById(id).firstChild.nodeValue;
+}
 function addLineToText(id,text){
   let div = document.getElementById(id)
-  div.insertAdjacentHTML('afterbegin',text+"<br/>");
+  div.insertAdjacentHTML('afterbegin',escapeStringForHTML(text)+"<br/>");
 }
 function randomInt(min,max){
   return Math.round(Math.random()*(max-min)+min);
