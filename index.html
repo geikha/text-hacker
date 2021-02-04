@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Text Hacker</title>
+
+    <link rel="stylesheet" href="/style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/script.js" charset="utf-8" defer></script>
+  </head>
+
+  <body>
+    <h1>Text hacker <span style="font-size:15px">by Ritchse</span></h1>
+
+    <form onsubmit="return false">
+      <label for="text">Text:</label><br />
+      <div id="input">
+        <input type="text" id="txt" name="txt" />
+        <button id="button">hack</button>
+      </div>
+      <div id="opt">
+        <br />
+        <div id="optacc">
+          <input type="checkbox" id="acc" name="acc" />
+          accumulative
+        </div>
+        <div id="optrate">
+        <input type="number" id="rate" name="rate" value="200" />
+        rate
+        </div>
+      </div>
+    </form>
+    <br />
+    <div id="hacktext">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+    </div>
+  </body>
+</html>
