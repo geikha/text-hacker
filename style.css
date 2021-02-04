@@ -33,6 +33,15 @@ body {
   margin: 2em;
   line-height: 150%;
 }
+/* unvisited link */
+a:link {
+  color: #0f0;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
 
 h1 {
   font-style: italic;
