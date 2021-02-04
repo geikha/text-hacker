@@ -259,7 +259,6 @@ function getText(id){
 }
 function clearDiv(id) {
   let div = document.getElementById(id);
-  console.log(div)
   while (div.firstChild) {
     div.removeChild(div.firstChild);
   }
