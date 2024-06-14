@@ -32,7 +32,7 @@ const vowelWeight = [
 ]
 ```
 ## how to hack text inside your own website
-Take everything from [script.js](https://github.com/ritchse/text-hacker/blob/main/script.js) except the last two blocks of code. Then you can do something like:
+Take everything from [script.js](https://github.com/geikha/text-hacker/blob/main/script.js) except the last two blocks of code. Then you can do something like:
 ```js
 document.addEventListener(
   "DOMContentLoaded",
